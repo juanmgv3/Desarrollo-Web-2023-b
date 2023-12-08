@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuentes</title>
+    <style>
+        /* Fuentes */
+        p.a{
+            font-family: "Times New Roman", Times;
+        }
+
+        p.b{
+            font-family: Arial, Helvetica;
+        }
+
+        p.c{
+            font-family: forte;
+        }
+        /* font feautre settings */
+            /*habilitar small-caps  */
+            .ejem1{font-feature-settings: "smcp" on;}
+            /* habilitar fracciones en automatico */
+            .ejem2{font-feature-settings: "frac";}
+
+        /* tamaño de las fuentes */
+
+        div.a{
+            font-size: 15px;
+        }
+
+        div.b{
+            font-size: large;
+        }
+
+        div.c{
+            font-size: 150px;
+        }
+
+       /* Estilo de las fuentes */
+       p.d{
+            font-style: normal;
+        }
+
+        p.e{
+            font-style: italic;
+        }
+
+        p.f{
+            font-style: oblique;
+        }
+
+        /* Sombras */
+        /* El tercer valor agrega el difuminado */
+
+        h1.a{
+            text-shadow: 2px 2px #FF0000;
+        }
+        /* se puede poner mas de una sombra separados por coma */
+        h1.b{
+            text-shadow: 0 0 3px #ff0000,
+            0 0 5px #0000ff;
+        }
+
+        /* transformacion  */
+
+        p.g{
+            text-transform: lowercase;
+        }
+
+        p.h{
+            text-transform: uppercase;
+        }
+
+        p.i{
+            text-transform: capitalize;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Fuentes -->
+    <p class="a">Fuente Times New Roman</p>
+    
+    <p class="b">Fuente Arial</p>
+
+    <p class="c">Fuente forte</p>
+
+    <!-- font feature settings -->
+    <div class="ejem1">This is some text 0123</div>
+    
+    <div class="ejem2">This is some text 0123</div>
+    <!-- Tamaño de las fuentes -->
+
+    <div class="a">Algun texto</div>
+    
+    <div class="b">Algun texto</div>
+    
+    <div class="c">Algun texto</div>
+
+    <!-- Estilo de las fuentes -->
+
+    <p class="d">Parrafor, normal</p>
+    
+    <p class="e">Parrafo, italic</p>
+
+    <p class="f">Parrafo, italic y subrayado</p>
+
+    <!-- Sombras -->
+    
+    <h1 class="a">Propiedad text-shadow</h1>
+
+    <h1 class="b">Text-shadow con rojo y azul neon</h1>
+
+    <!-- transformacion -->
+    
+    <p class="g">ESTA EN MAYUSCULAS</p>
+
+    <p class="h">esta en minusculas</p>
+    
+    <p class="i">esta sin letra capital</p>
+
+
+</body>
+</html>

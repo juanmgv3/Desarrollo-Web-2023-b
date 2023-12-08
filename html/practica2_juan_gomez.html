@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con estilos</title>
+    <link rel="stylesheet" href="/css/practica2_juan_gomez.css" />
+  </head>
+  <body>
+    <h1>Ejemplo de formulario con CSS (Tarea2)</h1>
+
+    <div class="main-container">
+      <div class="container1">
+        <div class="block-email">
+          <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </form>
+        </div>
+
+        <div class="block-password">
+          <form>
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+          </form>
+        </div>
+      </div> <!--Container 1  para usar FLEX-->
+
+      <div class="block-address">
+        <form>
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="1234 Main St" />
+        </form>
+      </div>
+
+      <div class="block-address2">
+        <form>
+          <label for="address2">Address 2</label>
+          <input
+            type="text"
+            id="address2"
+            placeholder="Apartment, studio or Floor"
+          />
+        </form>
+      </div> 
+
+      <div class="container2">
+        <div class="block-city">
+          <form>
+            <label for="city">City</label>
+            <input type="text" id="city" />
+          </form>
+        </div>
+
+        <div class="block-state">
+          <form>
+            <label for="state">State</label>
+            <select name="state"> 
+              <option value="disabled selected">Choose...</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Texas">Texas</option>
+              <option value="Colorado">Colorado</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="block-zip">
+          <form>
+            <label for="zip">Zip</label>
+            <input type="text" id="zip" />
+          </form>
+        </div>
+      </div>  <!--Container 2  para usar FLEX-->
+
+
+      <div class="block-checkout">
+        <form> 
+            <input type="checkbox" id="checkout">
+            <label for="checkout">Check me Out</label> <br>
+        </form>
+      </div>
+      
+      <div class="block-signIn">
+        <form>
+            <label for="signIn"></label>
+            <input type="submit" id=signIn value="Sign in">
+        </form>
+     </div>
+
+    </div> <!--Main Container para alinear auto-->
+

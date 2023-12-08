@@ -1,0 +1,33 @@
+/*  selector por nombre*/
+
+p{
+    text-align: center;
+    background-color: blue;}
+
+/* selector por id */    
+#para1{
+    text-align: center;
+    background-color: green;
+}
+
+/*  selector por clase */
+.center
+{
+    text-align: center;
+    background-color:violet;
+}
+
+/* Elementos especificos de HTML afectados por una clase */
+p.right{
+    text-align: right;
+}
+
+/* agrupacion de selectores */
+h2, h3{
+    color:red;
+}
+
+/* mas de una clase, hay un parrafo que tiene clase "right" y "text" */
+p.class{
+    font-size: 20px;
+}

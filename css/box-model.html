@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+
+    /* boxing model */
+        #box{
+            margin: 50px;
+            border: 2px solid red;
+            padding: 10px;
+            width: 600px;
+        }
+
+        .caja{
+            height: 100px;  /*la altura no esta definida en el navegador, ya que incrementa al agregar contenido*/
+            width: 150px;
+            background-color: red;
+        }
+     /* Bordes */
+     h1{
+        border: 5px solid red;
+        width: 450px;
+     }
+
+     h2{
+        border:4px dotted blue;
+        width: 350px;
+     }
+
+     div{
+        border: double;
+        width: 250px;
+     }
+
+     h3{
+        border:2px solid green;
+        border-radius: 10px;
+        width: 200px;
+     }
+
+    /* box  shadow  */
+
+   #example1{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    margin-bottom: 50px;
+   }
+
+   #example2{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px red;
+    margin-bottom: 50px;
+   }
+
+   #example3{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin-bottom: 50px;
+   }
+
+   #example4{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+    margin-bottom: 50px;
+   }
+
+   #example5{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    margin-bottom: 50px;
+   }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- boxing model -->
+    <p id="box">Hola</p>
+    <div class="caja"> </div>
+    
+    <!-- Bordes -->
+    <h1>Borde rojo</h1>
+    <h2>Borde azul en puntos</h2>
+    <div>Borde doble</div>
+    <h3>border radius</h3>
+
+    <!--box  shadow -->
+
+    <div id="example1">
+        <p>Por defecto se establece color negro, pero puedes definir el color que sea</p>
+    </div>
+
+    <div id="example2">
+        <p>El tercer valor opcional agrega un efecto de desenfoque a la sombra</p>
+    </div>
+
+    <div id="example3">
+        <p>El cuarto valor opcional define la extension de la sombra</p>
+    </div>
+
+    <div id="example4">
+        <p>Puedes definir multiples sombras</p>
+    </div>
+
+    <div id="example5">
+        <p>Puedes definir multiples con efecto difuminado</p>
+    </div>
+
+</body>
+</html>

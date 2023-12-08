@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="/html/accion.html" method="post">   <!--lo cambio por get-->
+
+    <fieldset>
+    <legend>Crear Usuario</legend>
+
+    <label for="nombre">Nombre:</label> 
+    <input type="text" name="nombre" id="nombre" value="MANOLO"> <br><br>
+
+    <label for="apellido">Apellido:</label> 
+    <input type="text" name="apellido" id="apellido" placeholder="Ejemplo: Uribe">  <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" min="18" max="30" step="2"> <br><br>
+
+    <textarea name="descripcion" id="descripcion" cols="30" rows="10">Alguna Descripcion</textarea> <br><br>
+
+    <select name="cars">  <!-- muchas opciones -->
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select> <br><br>
+
+    <p>Seleccione su genero: </p>    <!--menos opciones -->
+    <input type="radio" id="hombre" name="genero" value="hombre">
+    <label for="hombre">Hombre</label> <br>
+    <input type="radio" id="mujer" name="genero" value="mujer">
+    <label for="hombre">Mujer</label> <br><br>
+
+   <p>Seleccione su auto:</p> <!--multiples opciones-->
+
+   <input type="checkbox" name="vehiculo1" id="vehiculo1" value="volvo">
+   <label for="vehiculo1">Volvo</label> <br>
+   <input type="checkbox" name="vehiculo2" id="vehiculo2" value="Saab">
+   <label for="vehiculo2">Saab</label> <br>
+   <input type="checkbox" name="vehiculo3" id="vehiculo3" value="Fiat">
+   <label for="vehiculo3">Fiat</label> <br>
+   <input type="checkbox" name="vehiculo4" id="vehiculo4" value="Audi">
+   <label for="vehiculo4">Audi</label> <br> <br>
+     
+    <input type="submit" value="Guardar"><br><br>
+    <input type="reset"  value="Borrar">
+
+
+    </fieldset>
+    </form>
+
+    <p>
+        <div>
+            <button type="button" onclick="alert('Hello World')">Da click</button>
+        </div>
+    </p>
+
+
+</body>
+</html>

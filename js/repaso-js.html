@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repaso JS</title>
+  </head>
+  <script>
+    var x, y;
+
+    x = "5";
+    y = "3.2";
+
+    document.write("VARIABLES TIPO TEXTO");
+    document.write("<br>");
+
+    document.write(x + y + " " + typeof (x + y)); //Escribe 53.2 string
+    document.write("<br>");
+    document.write(x * y + " " + typeof (x * y)); //Escribe 53.2 string
+
+    // java es de tipado dinamico
+    x = 10;
+    y = 3.7;
+
+    document.write("<br>" + "<br>");
+    document.write("VARIABLES TIPO NUMERICO");
+    document.write("<br>");
+
+    document.write("x+y =" + " " + (x + y));
+    document.write("<br>");
+
+    document.write("x-y =" + " " + (x - y));
+    document.write("<br>");
+
+    document.write("x*y =" + " " + x * y);
+    document.write("<br>");
+
+    document.write("x/y =" + " " + x / y);
+    document.write("<br>");
+
+    document.write("x%y =" + " " + (x % y));
+    document.write("<br>");
+
+    // post incremento
+    document.write("x++ =" + " " + x++ + " ,x=" + " " + x);
+    document.write("<br>");
+
+    // pre-incremento
+    document.write("++x =" + " " + ++x + " ,x=" + " " + x);
+
+    x = true;
+    y = false;
+
+    //VARIABLES TIPO BOOLEAN
+
+    //Tabla de verdad "AND"
+
+    document.write("<br>" + "<br>");
+    document.write("VARIABLES TIPO BOOLEAN");
+    document.write("<br>");
+
+    document.write("x AND y => " + (x && y));
+    document.write("<br>");
+    document.write("y AND x => " + (y && x));
+    document.write("<br>");
+    document.write("x AND x => " + (x && x));
+    document.write("<br>");
+    document.write("y AND y => " + (y && y));
+
+    //Tabla de verdad "OR"
+    document.write("<br>" + "<br>");
+
+    document.write("x OR y => " + (x || y));
+    document.write("<br>");
+    document.write("y OR x => " + (y || x));
+    document.write("<br>");
+    document.write("x OR x => " + (x || x));
+    document.write("<br>");
+    document.write("y OR y => " + (y || y));
+
+    // Igualdad y Negacion
+    document.write("<br>" + "<br>");
+
+    document.write("x == y => " + (x == y));
+    document.write("<br>");
+
+    document.write("x != y => " + (x != y));
+
+    //Variables tipo listas
+    var nombre = "francesc_EsUnaVariable";
+    var macedonia = ["poma", "pera", 33, nombre, true, "barcelona"];
+
+    document.write("<br>" + "<br>");
+
+    document.write("VARIABLES TIPO LISTAS");
+    document.write("<br>");
+
+    document.write("macedonia[0] = " + macedonia[0]);
+    document.write("<br>");
+
+    document.write("macedonia[2] = " + macedonia[2]);
+    document.write("<br>");
+
+    document.write("macedonia[3] = " + macedonia[3]);
+    document.write("<br>");
+
+    document.write("macedonia[4] = " + macedonia[4]);
+    document.write("<br>");
+
+    document.write("macedonia.length = " + macedonia.length);
+
+    //VARIABLES TIPOP OBEJETOS O TUPLAS
+    document.write("<br>" + "<br>");
+    document.write("VARIABLES TIPO OBJETO O TUPLAS");
+    document.write("<br>");
+
+    var persona = {
+      nombre: "Francesc",
+      apellido: "Ricart",
+      aficiones: ["html", "css", "javascript"],
+      inscrito: 1,
+    };
+
+    document.write("persona.nombre = " + persona.nombre);
+    document.write("<br>");
+
+    document.write("persona.aficiones[2] = " + persona.aficiones[2]);
+    document.write("<br>");
+
+    document.write("persona.inscrito = " + persona.inscrito);
+
+    //CONDICIONALES === !== < <= > >=
+
+    document.write("<br>" + "<br>");
+    document.write("CONDICIONALES");
+    document.write("<br>");
+
+    var edad;
+    edad = 35;
+    // edad = Number(prompt("Introduce tu edad"));
+
+    if (edad >= 0 && edad < 20) {
+      document.write("Tienes MENOS de 20 años");
+    } else if (edad >= 20 && edad <= 40) {
+      document.write("Tienes ENTRE 20 y 40 años");
+    } else {
+      document.write("Tienes MAS de 40 años");
+    }
+
+    //SWITCH
+
+    document.write("<br>" + "<br>");
+    document.write("SWITCH");
+    document.write("<br>");
+
+    var dia = new Date().getDate();
+
+    switch (dia) {
+      case 6:
+        text = "Hoy es Sabado";
+        break;
+      case 0:
+        text = "Hoy es Domingo";
+        break;
+      default:
+        text = "Hoy es cualquier otro dia excepto sabado y domingo";
+        break;
+    }
+
+    document.write("dia = " + dia + ", " + text);
+
+    //CICLOS
+
+    document.write("<br>" + "<br>");
+    document.write("CICLOS break, continue");
+    document.write("<br>");
+
+    //for
+    document.write("for");
+    document.write("<br>");
+
+    for (let paso = 0; paso < 6; paso++) {
+      document.write("paso = " + paso + "<br>");
+    }
+
+    //while
+    document.write("while");
+    document.write("<br>");
+
+    n = 0;
+    x = 0;
+    while (n < 3) {
+      n++;
+      x += n;
+      document.write( "n = " + n + "; x = " + x + "<br>");
+    }
+
+    //do while
+    document.write("do while");
+    document.write("<br>");
+    i=0;
+    do{ 
+       i+=1;
+       document.write("i = " + i + "<br>");
+    }while(i<5);
+
+    //FUNCIONES
+
+    document.write("<br>");
+    document.write("FUNCIONES; variables globales y locales");
+    document.write("<br>");
+    
+    var num1 = 2;
+    var num2 = 3;
+    
+    document.write(" num1: " + num1 + " num2: " + num2 + "<br>");
+    document.write('suma : ' + suma(num1, num2) + "<br>");
+    document.write('resta : ' + resta(num1, num2) + "<br>");
+    document.write('multiplicacion : ' + multiplicacion() + "<br>");
+    document.write('division : ' + division(10, 2) +  "<br>"); 
+
+    function suma(a,b){ return a+b;}
+    function resta(a,b){return a-b;}
+    //sin parametros
+    function multiplicacion(){return num1*num2;}
+    //variables globales y locales
+    function division(a, b){
+        document.write("(num1)/a: " + num1/b + "=> num1: " + num1 + " a: " + a + "<br>");
+        return (num1)/(a);
+    }
+
+    //ARRAY Y SUS METODOS
+
+    document.write("<br>");
+    document.write("ARRAYS Y SUS METODOS: .lenght, .toString(), .pop(), .push(kiwi), .shift(), .unshift(Manzana), .concat(arr1, arr2,...) ");
+    document.write("<br>");
+
+    
+    var fruits = ["Banana", "Naranja", "Manzana", "Mango"];//[ 'Banana', 'Naranja', 'Manzana', 'Mango' ]
+    var fruits2 = ["Pera", "Uvas"];
+    var fruits3 = ["Fresas", "Guayabas"];
+
+    document.write("fruits.length: " + fruits.length + "<br>");//4
+     
+    document.write("fruits.toString(): " + fruits.toString() + "<br>");//Banana,Naranja,Manzana,Mango
+
+   fruits.pop(); //retorna Mango
+
+    document.write("fruits POP: " + fruits + "<br>");//Banana,Naranja,Manzana
+
+    fruits.push("Kiwi");
+
+    document.write("fruits PUSH(kiwi): " + fruits + "<br>");//Banana,Naranja,Manzana, Kiwi
+    
+    fruits.shift();//retorna Banana
+    
+    document.write("fruits SHIFT: " + fruits + "<br>");//Naranja, Manzana, Kiwi
+
+    fruits.unshift("Coco");
+
+    document.write("fruits UNSHIFT: " + fruits + "<br>");//Coco,Naranja, Manzana, Kiwi
+ 
+    fruits.splice(1, 2, "Piña", "Sandia");
+    
+    document.write("fruits SPLICE(1,2,piña,sandía): " + fruits + "<br>");//Coco,Piña,Sandía, Kiwi
+
+    fruits= fruits.concat(fruits2,fruits3);
+
+    document.write("fruits CONCAT(fruits2,fruits3): " + fruits + "<br>");//Coco,Piña,Sandía, Kiwi, Pera, Uvas, Fresas, Guayabas
+
+    fruits.reverse();
+    
+    document.write("fruits REVERSE: " + fruits + "<br>");//Guayabas, Fresas, Uvas, Pera, Kiwi, Sandía, Piña, Coco
+
+    fruits.sort();
+    
+    document.write("fruits SORT: " + fruits + "<br>");//Coco, Fresas, Guayabas, Kiwi, Pera, Piña, Sandía, Uvas
+ 
+    //FILTER
+
+    /*
+    El método `filter()` es una función incorporada en el tipo `Array<number>` que se utiliza para filtrar los elementos de un arreglo según un criterio dado. Toma una función de predicado como argumento, que se ejecuta para cada elemento del arreglo. Si la función de predicado devuelve `true` para un elemento determinado, ese elemento se incluirá en el nuevo arreglo resultante. Si la función de predicado devuelve `false`, ese elemento será excluido del nuevo arreglo resultante.
+   
+    -`predicate` es una función que se aplica a cada elemento del arreglo. Debe devolver un valor booleano que indique si se debe incluir el elemento en el nuevo arreglo resultante o no. La función de predicado puede aceptar hasta tres argumentos:
+    -`value`: El valor actual del elemento siendo procesado.
+    -`index`: El índice del elemento actual dentro del arreglo.
+    -`array`: El arreglo original al que se llama `filter()`.
+    -`thisArg` (opcional) especifica el valor a usar como `this` cuando se ejecuta la función de predicado.
+      
+    */
+
+    //(method) Array<number>.filter(predicate: (value:number, index: number, array: number[ ]) => unknown, thisArg?: any): number[ ] (+1 overload)  
+
+      
+
+    //funcion comun
+    document.write("<br>");
+    document.write("FILTER; funcion comun, anonima y de flecha: callback ");
+    document.write("<br>");
+
+    var ages = [45, 4, 9, 16, 25];
+    var over18 = ages.filter(myFilterFunction);
+
+    document.write("numbers : " + ages + "<br>");
+    document.write("over18 : " + over18 + "<br>");
+
+    function myFilterFunction(value, index, array){
+      return value>18;
+    }
+
+    //funcion anonima
+    ages = [27, 10, 2, 33, 60];
+    over18 = ages.filter(function(value, index, array){ return value>18;});
+    document.write("numbers : " + ages + "<br>");
+    document.write("over18 : " + over18 + "<br>");
+    
+    // funcion flecha
+    ages = [72, 16, 23, 13, 40];
+    over18 = ages.filter((value, index, array)=>{ return value>18;});
+    document.write("numbers : " + ages + "<br>");
+    document.write("over18 : " + over18 + "<br>");
+
+    //funcion flecha simplificada
+    ages = [72, 16, 23, 13, 40];
+    over18 = ages.filter((value, index, array) => value>18 );
+    document.write("numbers : " + ages + "<br>");
+    document.write("over18 : " + over18 + "<br>");
+
+
+     //ITERADOR: foreach
+
+    document.write("<br>");
+    document.write("ITERADOR foreach");
+    document.write("<br>");
+
+    var numbers = [45, 4, 9, 25];
+
+    numbers.forEach(myFunction);
+
+    function myFunction(value, index, array){
+        document.write("array = " + array + ", index " + index + ", value = " + value + "<br>");
+    }
+
+
+  </script>
+
+  <body></body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectores-combinadores</title>
+
+    <!--selector descendientes (espacio en blanco)  -->
+    <!--selector de hijos; div > p   -->
+    <!--selector de hermano adyacente  div +;   -->
+    <!--selector de atributos; div ~ (altGr + ~) -->
+
+    <!-- 
+        ->Selector Descendente: sirve para seleccionar un elemento dentro de otro.
+        ->Selector de hijo directo >: hijo directo y nieto, > excluye nietos es decir solo afecta hijos directos.
+        ->Selector de hermanos:Si el elemento esta dentro otro elemento es hijo, pero, si estan dentro del mismo nivel son hermanos. 
+        -> + Sirve para seleccionar el hermano siguiente.
+        -> ~ sirve para seleccionar todos los hermanos siguientes.
+
+     -->
+
+    <style>
+      div ~  p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SELECTORES COMBINADORES -->
+    <div>
+      <p>parrafo 1</p>
+      <p>parrafo 2</p>
+      <section>
+        <p>parrafo 3</p>   <!-- > lo que excluye por ser nieto-->
+      </section>
+     <p>parrafo 4</p>
+    </div>
+
+    <p>parrafo 5</p>
+    <h3>ENCABEZADO</h3>  <!--~  QUEDA EXCLUIDO POR NO SER< PARRAFO-->
+    <p>parrafo 6</p>
+    <p>parrafo 7</p>
+  </body>
+</html>

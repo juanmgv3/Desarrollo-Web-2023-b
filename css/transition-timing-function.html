@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition timing function</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            background: red;
+            color: white;
+            font-weight: bold;
+            transition: width 3s;
+            margin-bottom: 10px;
+
+        }
+
+        div:hover{
+            width: 600px;  /*llega hasta 600*/
+        }
+        
+        #div1{transition-timing-function: linear;}
+        #div2{transition-timing-function: ease;}
+        #div3{transition-timing-function: ease-in;}
+        #div4{transition-timing-function: ease-out;}
+        #div5{transition-timing-function: ease-in-out;}
+
+    </style>
+</head>
+<body>
+
+    <p>La propiedad transition timing-function permite indicar el tipo de transicion que queremos conseguir. Cuando comenzamos, se recomienda utilizar linear, que realiza una transicion lineal, siempre a velocidad constante. Sin embargo, podemos variar dicha velocidad para que sea mas rapida al principio y mas lenta al final o viceversa, entr otra posibilidades.</p>
+
+    <p>INICIO: TRANSCURSO: FINAL</p>
+
+    <div id="div1">linear: lento, rapido, lento</div>
+    <div id="div2">ease: normal, normal, normal</div>
+    <div id="div3">ease-in: lento, normal, normal</div>
+    <div id="div4">ease-out: normal, normal, lento</div>
+    <div id="div5">ease-in-out: lento, norma, lentol</div>
+    
+    <div id="div5">ease-in-out: lento, norma, lentol</div>
+    
+</body>
+</html>

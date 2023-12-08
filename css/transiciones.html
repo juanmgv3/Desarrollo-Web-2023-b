@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transiciones</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;   /*por que background??? */
+
+            /* transition EJEMPLO normal */
+            /* transition: width 4s; */
+
+            /* transition PROPERTY */
+            transition:width;
+            transition-duration: 4s;
+
+            /* transition DELAY */
+            /* transition-delay: 2s; */
+
+        }
+
+         div:hover{
+        width: 300px;
+         }
+
+    </style>
+    
+</head>
+<body>
+    <p>Desplacese sobre el elemento div a continuacion para ver el efecto de transicion</p>
+
+    <div></div>
+    
+</body>
+</html>

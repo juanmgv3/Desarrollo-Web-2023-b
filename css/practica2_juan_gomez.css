@@ -1,0 +1,81 @@
+
+h1{
+    font-family:'Times New Roman', Times, serif ;
+    color: burlywood;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Poder centrar todos los campos */
+.main-container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Conainer 1 para alinear horizontalmente email and password */
+.container1, .container2{
+    display: flex;
+   }
+
+
+/* las etiquetas label e input son elementos de linea =>BLOCK*/
+/* Dar estilo a LABEL: estilo, tamano y color de letra y que se separe del campo INPUT 5px */
+.block-signIn label,  /*para quede de margin bottom*/
+.block-email label,
+.block-password label,
+.block-address label,
+.block-address2 label,
+.block-city label,
+.block-state label,
+.block-zip label{
+  display: block; /*convertir a elemento de bloque*/
+  margin-bottom: 5px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px ;
+  color: gray;
+  
+}
+
+.block-checkout label {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: gray;} /*no es se convirtio a BLOCK, para que no de margin bottom*/
+
+/* Dar estilo a INPUT: width promedio, relleno, margen y redondeo de vertices,  y que se separe del campo LABEL 15px*/
+.block-state select,   /*SELECT el resto son INPUT*/
+.block-email input,
+.block-password input,
+.block-address input,
+.block-address2 input,
+.block-city input,
+.block-zip input{
+  display: block; /*convertir a elemento de bloque*/
+  margin-bottom: 15px;
+
+  width: 200px;
+
+  padding: 5px 10px;
+  border: 1.5px solid gainsboro;
+  border-radius: 5px;
+}
+
+.block-state select{color: gray}  /* para cambiar el Choose.. a gris*/
+
+.block-signIn input{                /*arriba solo se convirtio a bloque*/
+    background-color: #007bff ;
+    padding: 10px 15px;
+    border: 1.5px solid gainsboro;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+/* Reajustar campos de Entrada */
+
+.block-email input, .block-city input {width: 375px; }
+
+.block-address input, .block-address2 input{ width: 776px;}
+
+.block-password input{width: 375px; margin-left: 5px; }
+
+.block-zip input{width: 140px; margin-left: 5px; }
+
+.block-state select{width: 230px; margin-left: 5px; }

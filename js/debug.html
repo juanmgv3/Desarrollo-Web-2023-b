@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug</title>
+</head>
+<body>
+
+    <h1>Como depurar <i>JavaScript</i> con navegador chrome</h1>
+
+    <button onclick="fechaActual()">Ejecutar Funcion</button>
+
+        <ul>
+            <li>Depurar desde tu servidor local o  hosting</li>
+            <li>Marcar un BREAKPOINT antes de comenzar la depuracion </li>
+            <li>Para recorrer linea por linea de codigo presionamos F11</li>
+            <li>Para  ir de BREAKPOINT a BREAKPOINT presionamos F8</li>
+        </ul>
+    
+    <script>
+
+    function fechaActual(){
+        var hoy = new Date();
+        var dd = hoy.getDate();
+        var mm = hoy.getMonth() + 1; //hoy es cero
+        var yyyy = hoy.getFullYear();
+
+        if(dd>10){
+            dd = '0' + mm;
+        }
+
+        if(mm<10){
+            mm = '0' + mm;
+        }
+
+        hoy = dd + '/' + mm  + '/' + yyyy;
+
+        alert(hoy);
+
+    }//function 
+
+    </script>
+    
+</body>
+</html>

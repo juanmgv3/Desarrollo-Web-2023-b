@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+  </head>
+
+  <body>
+
+    <!-- Evento On click  -->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">
+      Fecha y Hora
+    </button>
+    <p id="demo"></p>
+
+    <!-- Evento  onchange  & onkeydown-->
+
+    <!-- <input id="original" type="text" onchange="duplicar()"> -->
+    <input id="original" type="text" onkeydown="duplicar()" />
+    <input id="copia" type="text" />
+
+    <script type="text/javascript">
+      function duplicar() {
+        let original = document.getElementById("original").value;
+        document.getElementById("copia").value = original;
+      }
+    </script>
+
+    <br />
+    <br />
+
+    <!-- Evento on mouse over y on mouse out  varios eventos en un solo input-->
+  
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: red; width: 120px; height: 20px; padding: 40px;">
+        DOOM
+    </div>
+   
+    <script>
+      function mOver(obj) {
+        obj.innerHTML = "MOUSE OVER";
+      }
+
+      function mOut(obj) {
+        obj.innerHTML = "MOUSE OUT";
+      }
+    </script>
+
+    <br>
+    <br>
+    <!-- Evento on mouse down y on mouse up  -->
+
+    <div
+      onmousedown="mdown(this)"
+      onmouseup="mUp(this)"
+      style="background-color: blue; width: 120px; height: 20px; padding: 40px"
+    >
+      DOOM
+    </div>
+
+    <script>
+      function mdown(obj) {
+        obj.innerHTML = "MOUSE DOWN";
+      }
+
+      function mUp(obj) {
+        obj.innerHTML = "MOUSE UP";
+      }
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM</title>
+</head>
+
+<body>
+
+    <!-- la diferencia radica en la forma en que se busca y se obtienen los elementos. Por ID se obtiene un único elemento, por clase se obtienen múltiples elementos y por nombre también se obtienen múltiples elementos. -->
+
+    <!-- 
+    Class:
+        - La clase es un atributo que se utiliza para agrupar elementos que comparten características comunes.
+        - Se utiliza el atributo `class` para asignar una clase a un elemento HTML, y se puede asignar una o más clases separadas por espacios.
+        - La clase se utiliza para aplicar estilos con CSS o seleccionar elementos con JavaScript utilizando el método `getElementsByClassName()`.
+        - Los elementos con la misma clase pueden tener diferentes nombres, ID o etiquetas, pero se agrupan según la clase que comparten.
+        - Se pueden asignar múltiples clases a un solo elemento. 
+    -->
+
+
+    <!-- 
+    Name:
+        - El nombre  es un atributo utilizado principalmente en elementos de formulario HTML, como inputs, selects, etc.
+        - Se utiliza el atributo `name` para asignar un nombre único a un elemento de formulario.
+        - El nombre se utiliza para identificar los datos enviados por el formulario cuando se envía a través de HTTP mediante el método GET o POST.
+        - Los elementos con el mismo nombre se agrupan para enviar los valores de los campos del formulario al servidor.
+        - Normalmente se obtienen los elementos por su nombre utilizando el método `getElementsByName()` para interactuar con ellos en JavaScript.
+     -->
+
+     <!-- 
+    ID:
+        El ID (identificador) es un atributo único utilizado para identificar un elemento HTML de manera exclusiva. A diferencia de las clases y los nombres, el ID debe ser único dentro del documento HTML, es decir, no se pueden asignar IDs duplicados a varios elementos.
+
+        No es estrictamente necesario que el ID sea numérico. El ID puede ser cualquier cadena de caracteres válida en HTML, siempre y cuando sea única dentro del documento.
+
+        La importancia del ID radica en su capacidad para identificar de forma única un elemento específico en el DOM (Documento de Objeto del Modelo). Algunas características del ID son:
+
+        1. Identificación única: Cada elemento en el documento HTML solo puede tener un ID único. Esto significa que ninguno otro elemento en el mismo documento puede compartir el mismo ID.
+
+        2. Acceso rápido: El método `getElementById()` en JavaScript se utiliza para acceder rápidamente al elemento identificado por su ID único. Esto permite interactuar, modificar su contenido, aplicar estilos o realizar otras operaciones específicas en ese elemento en particular.
+
+        3. Estilos y selectores CSS: Los IDs se pueden utilizar como selectores CSS para aplicar estilos específicos a un elemento particular. Al utilizar el ID como selector, se podrá hacer que se apliquen estilos únicamente a ese elemento en lugar de a todos los elementos que comparten una clase.
+      -->
+
+      <!-- 
+        Existen varios métodos para interactuar y manipular el Document Object Model (DOM) en JavaScript. Algunos de los métodos más comunes son:
+
+        1. getElementById(): Este método permite seleccionar un elemento del DOM utilizando su ID único. Devuelve el elemento seleccionado como un objeto.
+
+        2. getElementsByTagName(): Este método permite seleccionar todos los elementos en el DOM que coinciden con el nombre de la etiqueta especificada. Devuelve una colección de elementos como un objeto HTMLCollection.
+
+        3. getElementsByClassName(): Este método permite seleccionar todos los elementos en el DOM que tienen la clase especificada. Devuelve una colección de elementos como un objeto HTMLCollection.
+       -->
+
+       <!-- 
+        El manejo del DOM (Document Object Model) consiste en interactuar y manipular los elementos y nodos de un documento HTML o XML utilizando lenguajes de programación como JavaScript. El DOM es una representación estructurada del documento que permite acceder y modificar su contenido, estructura y estilos.
+
+        Con el manejo del DOM, puedes realizar diversas acciones, como:
+
+        1. Selección de elementos: Puedes seleccionar elementos individuales o grupos de elementos utilizando métodos como getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector() y querySelectorAll(). Estos métodos te permiten acceder a los elementos del documento de manera precisa y dinámica.
+
+        2. Manipulación de contenido: Puedes modificar el contenido de los elementos, como cambiar el texto, modificar atributos o agregar y eliminar elementos. Para hacer esto, utilizas métodos como innerHTML, textContent, setAttribute(), removeAttribute(), createElement(), appendChild(), entre otros.
+
+        3. Estilos y clases CSS: Puedes modificar los estilos de los elementos, cambiar clases CSS, agregar o quitar clases dinámicamente. Para esto, utilizas métodos como style, classList, addClass(), removeClass(), toggleClass(), entre otros.
+
+        4. Eventos: Puedes manejar eventos con los elementos del documento, como clics, desplazamientos del cursor, cambios de valor en campos de formulario, entre otros. Para esto, utilizas métodos como addEventListener() para asociar funciones o controladores de eventos.
+
+        5. Traversing del DOM: Puedes navegar por la estructura del DOM, accediendo a los hijos, padres, hermanos o elementos vecinos utilizando propiedades como parentNode, childNodes, firstChild, lastChild, previousSibling, nextSibling, entre otros.
+        -->
+
+        <!-- 
+        En el contexto del manejo del DOM, el uso de innerHTML tiene varios usos comunes:
+
+        1. Obtener el contenido HTML de un elemento: Puedes acceder al contenido HTML de un elemento utilizando innerHTML. Esto es útil cuando deseas obtener el texto o los elementos hijos dentro de un elemento específico.
+
+        2. Modificar el contenido HTML de un elemento: Puedes asignar una cadena de texto con formato HTML a la propiedad innerHTML para modificar el contenido de un elemento existente. Esto puede incluir agregar, editar o eliminar elementos y texto dentro del elemento.
+         -->
+    
+    <input id="1" type="text">
+    <p>Parrafo</p>
+    <h3 name="h">Walter</h3>
+    <h1 class="clase">Hola</h1>
+    <h1 class ="clase">Mundo</h1>
+
+
+    <script type="text/javascript">
+
+        document.getElementById('1').value = 100;
+        
+        var porTag = document.getElementsByTagName("p");
+        var porName = document.getElementsByName("h");
+        var porClase = document.getElementsByClassName("clase");
+
+        document.write(porTag + "<br>");
+        document.write(porName[0].innerHTML + "<br>");
+        document.write(porClase[0].innerHTML + "<br>");
+        document.write(porClase[1].innerHTML + "<br>");
+
+        console.log(porTag);
+        console.log(porName[0].innerHTML);
+        console.log(porClase[0].innerHTML);
+        console.log(porClase[1].innerHTML);
+
+
+    </script>
+
+
+</body>
+</html>

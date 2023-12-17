@@ -1,0 +1,145 @@
+h1{
+    font-family:'Times New Roman', Times, serif ;
+    color: burlywood;
+    text-align: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5 ;
+}
+
+main{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.formulario{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /*Colocar dos columnas */
+        row-gap: 10px; /* alejarse en y */
+        column-gap: 10px; /* alejarse en x */
+ }
+
+.formulario__label{
+    display: block;
+    font-weight: 700; /*  400 generalmente se considera normal y 700 se considera negrita */
+    padding: 10px;
+    cursor: pointer; /* manita */
+}
+
+
+.formulario__grupo-input{
+    position: relative; /* Poner al grupo un posicionamiento relativo */
+}
+
+.formulario__input{
+    width: 100%;   /*Bajar el icono */
+    background: #fff;
+    border: 3px solid black; /* ELIMINAR */
+    /* border: 3px solid transparent; */
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;    /* top righ bottom left*/
+    transition: .3s ease all;  /* duracion 0.3s, transiciÃ³n suave y gradual, acelerando y desacelerando suavemente en los extremos.*/
+}
+
+
+.formulario__input:focus{/*#######pseudoclase */
+    border: 3px solid #0075FF;
+    outline: none;  /*Quitar contorno predeterminado que se muestra al enfocar un elemento*/
+    box-shadow: 0px 0px 5px rgba(255, 0, 0, 1); /* ELIMINAR */
+    /* box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4); */
+}
+
+.formulario__input-error{
+    font-size: 12px; /*reducir tamaÃ±o de letra */
+    margin-bottom: 0;
+    display: none; /* desaparecer error de los input */
+}
+
+.formulario__input-error-activo{ /*#####modificador */
+    display: block; /* aparecer error de los input */
+}
+
+ .formulario__validacion-estado{/*#####modificador */
+    position: absolute;  /* Desplazar icono */
+    bottom: 15px;
+    right: 10px;
+    z-index: 100;  /* para que el icono este arriba de otros elementos* / 
+    font-size: 15px;  /* tamano icono */
+    opacity: 0; /*ocultar el icono */
+}
+
+.formulario__grupo-btn-enviar, .formulario__mensaje{
+    grid-column: span 2; /* que abarquen dos columnas*/
+}
+
+.formulario__mensaje p { /*quitar margenes al parrafo que contiene el msj  de Error de formulario*/
+    margin: 0; 
+}
+
+.formulario__mensaje{ /* estilo msj de error de formulario */
+ line-height: 40px;
+ background-color: #F66060;
+ padding: 0 15px;
+ border-radius: 3px ;
+ display: none; /*ocultar el msj de error de formulario*/
+}
+
+.formulario__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background-color: #000;
+    color: #ffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulario__btn:hover{ /*#######pseudoclase */
+    /* box-shadow: 3px 0px 30px rgba(163, 163, 163, 1); */
+    box-shadow: 0px 0px 5px rgba(255, 0, 0, 1); /* ELIMINAR */
+}
+
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo{
+    display: block;
+}
+
+/*----------------  Estilos para validaciÃ³n-----------*/
+.formulario__grupo-correcto .formulario__validacion-estado{/* poner icono en verde*/ 
+    color: #1ed12d;
+    opacity: 1;
+}
+
+/*-------------- incorrectos--*/
+.formulario__grupo-incorrecto .formulario__label{/* poner   label en rojo */ 
+    color: #bb2929; 
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{/* poner icono en rojo*/ 
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{/* poner input en rojo */
+    border: 3px solid #bb2929;
+}
+/*--------------- Media querys ---------------------*/
